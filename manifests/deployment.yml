@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: eddzaaprojectaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eddzaaprojectaks
+  template:
+    metadata:
+      labels:
+        app: eddzaaprojectaks 
+    spec:
+      containers:
+        - name: eddzaaprojectaks 
+          image: project1acrs.azurecr.io/eddzaaprojectaks
+          ports:
+          - containerPort: 80
